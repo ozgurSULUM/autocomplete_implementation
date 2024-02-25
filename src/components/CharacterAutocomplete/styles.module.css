@@ -1,0 +1,27 @@
+.characterAutocompleteListContent {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.characterAutocompleteListContentText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} 
+
+.characterAutocompleteListContentName {
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
+}
+
+.characterAutocompleteListInput {
+    width: 16px;
+    height: 16px;
+}
+
+.characterAutocompleteListContentEpisode {
+    opacity: 0.8;
+    font-size: 14px;
+}

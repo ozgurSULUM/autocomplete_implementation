@@ -1,0 +1,121 @@
+
+:root {
+    --autocomplete-button-width: 21px;
+    --autocomplete-container-gap: 4px;
+    --autocomplete-container-padding-x: 6px;
+}
+
+
+.autocompleteInputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--autocomplete-container-gap);
+    min-height: 44px;
+    width: 100%;
+    padding: 4px var(--autocomplete-container-padding-x);
+    border-radius: 8px;
+    background-color: white;
+    border: 2px solid var(--autocomplete-dark);
+    outline: 1px solid transparent;
+    transition: outline-color ease-in 150ms;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    max-width: 100%;
+}
+
+.autocompleteInputContentArea {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 6px;
+    max-width: calc(100% - (var(--autocomplete-button-width) + var(--autocomplete-container-gap) + var(--autocomplete-container-padding-x)));
+}
+
+.autocompleteInputContainer:hover {
+    outline-color: var(--autocomplete-hover);
+}
+
+.autocompleteInputContainer:focus-within {
+    outline-color: var(--autocomplete-focus);
+    outline-width: 2.5px;
+}
+
+.autocompleteInputContainer input[type="text"] {
+    font-size: 16px;
+    border: none;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    min-width: 20px;
+}
+
+.autocompleteList {
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+}
+
+.autocompleteList .autocompleteListItem{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.autocompleteListItem {
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color ease-in 80ms;
+    cursor: pointer;
+}
+
+.autocompleteListItemNoHover {
+    pointer-events: none;
+}
+
+.autocompleteListItem[data-selected="true"] {
+    background-color: var(--autocomplete-selected)
+}
+
+.autocompleteListItem.active{
+    background-color: var(--autocomplete-active) !important;
+}
+
+.autocompleteListItemHover:hover {
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: var(--autocomplete-hover)
+}
+
+.autocompleteDropdownIconButton {
+    cursor: pointer;
+    background-color: var(--autocomplete-bg-color);
+    padding: 2px 8px;
+    border-radius: 6px;
+    transition: background-color ease-in 80ms;
+}
+
+.autocompleteDropdownIconButton:hover {
+    background-color: var(--autocomplete-hover);
+}
+
+.autocompleteDropdownIconButton[data-open="true"] {
+    background-color: var(--autocomplete-hover);
+}
+
+.autocompleteDropdownIcon {
+    color: var(--autocomplete-icon-color);
+    transition: transform ease-in 120ms;
+}
+
+.autocompleteDropdownIconButton[data-open="true"] .autocompleteDropdownIcon {
+   transform: rotate(0.5turn);
+}
+
+.autocompleteInfoMessage {
+    color: var(--autocomplete-info-color);
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+}

@@ -1,0 +1,32 @@
+:root {
+    --chip-bg-delete-button: #E2E8F0;
+    --chip-bg-delete-icon-button: #94A2B8;
+    --chip-label: #334155;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    padding: 4px 8px;
+    background-color: var(--chip-bg-delete-button);
+    color: var(--chip-label);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.deleteButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--chip-bg-delete-icon-button);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteButton svg {
+    color: white
+}

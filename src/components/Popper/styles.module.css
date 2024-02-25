@@ -1,0 +1,13 @@
+.popperContainer {
+    position: absolute;
+    border: 1px solid var(--autocomplete-dark);
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px 0px;
+    visibility: hidden;
+    max-height: 450px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    opacity: 0;
+    transition: opacity ease-in 80ms;
+}

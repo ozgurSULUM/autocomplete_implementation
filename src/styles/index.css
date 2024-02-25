@@ -1,0 +1,154 @@
+/* CSS Reset */
+:root {
+  --autocomplete-dark: #94A2B8;
+  --autocomplete-focus: #c3d3ee;
+  --autocomplete-hover: #9cb6e369;
+  --autocomplete-active: #9cb6e394;
+  --autocomplete-selected:  #ebf0f9;
+  --autocomplete-bg-color: white;
+  --autocomplete-icon-color: black;
+  --autocomplete-info-color: rgba(0, 0, 0, 0.725);
+}
+
+/* Box-sizing border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+dd,
+dt,
+figure,
+blockquote,
+fieldset,
+pre,
+blockquote,
+form,
+button,
+input,
+select,
+textarea,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+/* Normalize line heights */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+dd,
+dt,
+figure,
+blockquote,
+fieldset,
+pre,
+blockquote,
+form,
+button,
+input,
+select,
+textarea {
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul and ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default styles on anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default styles on buttons */
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/* Set a default cursor for interactive elements */
+a,
+button,
+input,
+select,
+textarea {
+  cursor: pointer;
+}
+
+/* Ensure images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove extra spacing on inline and block-level elements */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+}
+
+/* Remove border and outline on focused elements */
+button,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+/* Remove table border spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
