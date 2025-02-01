@@ -1,5 +1,5 @@
 {
-  "name": "aiad-front-case",
+  "name": "component-examples",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -18,6 +18,7 @@
     "@reduxjs/toolkit": "^2.2.1",
     "autosuggest-highlight": "^3.3.4",
     "clsx": "^2.1.0",
+    "echarts": "^5.5.1",
     "i18next": "^23.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

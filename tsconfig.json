@@ -22,7 +22,14 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "/src/*": ["./src/*"],
-      "/store/*": ["./src/store/*"]
+      "/store/*": ["./src/store/*"],
+      "/rick-and-morty/api/*": ["./src/store/apis/RickAndMortyAPI/endpoints/*"],
+      "/base/api/*": ["./src/store/apis/baseAPI/endpoints/*"],
+      "/styles/*": ["./src/styles/*"],
+      "/constants/*": ["./src/constants/*"],
+      "/hooks/*": ["./src/hooks/*"],
+      "/config/*": ["./src/config/*"],
+      "/components/*": ["./src/components/*"]
     }
   },
   "include": ["src"],

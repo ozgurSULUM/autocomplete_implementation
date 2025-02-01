@@ -1,4 +1,4 @@
-interface CharacterInfo {
+export interface CharacterInfo {
     id: number;
       name: string;
       status: string;
@@ -13,7 +13,7 @@ interface CharacterInfo {
       created: string
 }
 
-interface SearchCharacterResponse {
+export interface SearchCharacterResponse {
     info: ResultInfo;
     results: CharacterInfo[]
 }

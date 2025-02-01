@@ -1,5 +1,5 @@
-export const CHARACTER = "rick_and_morty_character";
+export let CHARACTER = "rick_and_morty_character" as const;
 
-const tags = [CHARACTER];
+const tags: readonly string[]  = [CHARACTER];
 
 export default tags;

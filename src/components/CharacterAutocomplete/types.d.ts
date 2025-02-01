@@ -1,1 +1,0 @@
-type CharacterAutocompleteProps = AutocompleteProps<CharacterInfo>

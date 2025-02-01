@@ -1,19 +1,27 @@
 import { useState } from "react";
 import { createSelector } from "@reduxjs/toolkit";
-import parse from "autosuggest-highlight/parse";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
+
 import match from "autosuggest-highlight/match";
+import parse from "autosuggest-highlight/parse";
 
 import styles from "./styles.module.css";
 
-import Autocomplete from "/src/components/Autocomplete";
-import { useSearchCharacterQuery } from "/src/store/apis/RickAndMortyAPI/endpoints/character/endpoint";
+import { useSearchCharacterQuery } from "../../store/apis/RickAndMortyAPI/endpoints/character/endpoints";
 import useDebouncedValue from "/src/hooks/useDebouncedValue";
-import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
+
+import Autocomplete from "/src/components/Autocomplete";
+
+import { CharacterAutocompleteProps } from "./types";
+import { CharacterInfo } from "/rick-and-morty/api/character/types";
+import { SearchCharacterResponse } from "/rick-and-morty/api/character/types";
+import type { TypedUseQueryStateResult } from "@reduxjs/toolkit/query/react";
 
 const emptyArr: CharacterInfo[] = [];
 const selectCharacters = createSelector(
-  (result: any) => result.currentData,
-  (data: SearchCharacterResponse) => {
+  (result: TypedUseQueryStateResult<SearchCharacterResponse, any, any>) =>
+    result.currentData,
+  (data: SearchCharacterResponse | undefined): CharacterInfo[] => {
     return data && data.results.length > 0 ? data.results : emptyArr;
   }
 );
@@ -32,8 +40,6 @@ const CharacterAutocomplete = (props: CharacterAutocompleteProps) => {
         characters: selectCharacters(result),
       }),
     });
-
-  console.log("error", error);
 
   return (
     <Autocomplete

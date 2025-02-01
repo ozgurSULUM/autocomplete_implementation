@@ -3,6 +3,8 @@ import paths from "/src/constants/paths";
 
 import { CHARACTER } from "./tags";
 
+import { SearchCharacterResponse } from "./types";
+
 const characterEndpoint = Api.injectEndpoints({
     endpoints: (builder) => ({
         searchCharacter: builder.query<SearchCharacterResponse, string>({

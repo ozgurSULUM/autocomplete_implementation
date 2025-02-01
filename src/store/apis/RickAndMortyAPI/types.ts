@@ -1,17 +1,17 @@
-interface Pagination {
+export interface Pagination {
     page: number;
     size: number;
     sort: string;
 }
 
-interface ResultInfo {
+export interface ResultInfo {
     count: number;
     pages: number;
     next: string | null;
     prev: string | null;
 }
 
-interface CharacterLocation {
+export interface CharacterLocation {
     name: string,
     url: string
   }

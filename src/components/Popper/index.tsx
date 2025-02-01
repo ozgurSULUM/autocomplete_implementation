@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 
+import { PopperInterface } from "./types";
+
 function Popper({ children, id, anchorRef, open }: PopperInterface) {
   const popperRef = useRef<HTMLDivElement>(null);
 

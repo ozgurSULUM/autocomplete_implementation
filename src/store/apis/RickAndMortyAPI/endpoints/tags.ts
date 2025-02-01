@@ -1,6 +1,5 @@
 import characterTags from "./character/tags";
-import episodeTags from "./episodes/tags";
 
-const tags = [...characterTags, ...episodeTags];
+const tags: readonly string[] = [...characterTags];
 
 export default tags;

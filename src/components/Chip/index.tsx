@@ -3,6 +3,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./styles.module.css";
 
+import { ChipProps } from "./types";
+
 function Chip({ label, onDelete }: ChipProps) {
   return (
     <div className={styles.chip}>

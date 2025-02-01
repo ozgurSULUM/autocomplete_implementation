@@ -3,6 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Locales from "/src/constants/locales.enum";
 import i18next from "/src/config/i18n";
 
+import { GeneralSlice } from "./types";
+
 const initialState: GeneralSlice = {
   i18n: Locales.TR,
 };

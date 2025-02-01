@@ -1,6 +1,6 @@
+import type { ReactNode, DetailedHTMLProps, HTMLAttributes} from 'react';
 
-
-interface AutocompleteCommonProps<T> {
+export interface AutocompleteCommonProps<T> {
     options?: T[]
     renderOption?: (option: T, isSelected: boolean, props: RenderOptionProps)=>ReactNode
     inputValue?: string;
@@ -15,21 +15,21 @@ interface AutocompleteCommonProps<T> {
     inputId?: string;
 }
 
-type AutocompleteMultipleTrueProps<T> = {
+export type AutocompleteMultipleTrueProps<T> = {
     multiple: true;
     value: T[]
     renderTags?: (values: T[]) => ReactNode;
     onChange?: (values: T[])=>void
 }
 
-type AutocompleteMultipleFalseProps<T> =  {
+export type AutocompleteMultipleFalseProps<T> =  {
     multiple?: false;
     value: T | null;
     renderTags?: (values: T[]) => ReactNode;
     onChange?: (value: T | null)=>void
 }
 
-type RenderOptionProps = DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> & { "data-selected": boolean };
+export type RenderOptionProps = DetailedHTMLProps<HTMLAttributes<HTMLLIElement>, HTMLLIElement> & { "data-selected": boolean };
 
-type AutocompleteProps<T> = AutocompleteCommonProps<T> & (AutocompleteMultipleTrueProps<T> | AutocompleteMultipleFalseProps<T>) ;
+export type AutocompleteProps<T> = AutocompleteCommonProps<T> & (AutocompleteMultipleTrueProps<T> | AutocompleteMultipleFalseProps<T>) ;
 

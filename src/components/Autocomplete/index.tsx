@@ -11,11 +11,14 @@ import {
 
 import Chip from "/src/components/Chip";
 import Popper from "/src/components/Popper";
+import LinearProgress from "../LinearProgress";
 
 import styles from "./styles.module.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import LinearProgress from "../LinearProgress";
+
+import { AutocompleteProps, RenderOptionProps } from "./types";
 
 function Autocomplete<T>(props: AutocompleteProps<T>) {
   // Default Props and function definitions - start
